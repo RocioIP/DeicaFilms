@@ -1,46 +1,48 @@
-# Getting Started with Create React App
+# DeicaFilms
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+DeicaFilms es una mini-webapp de películas donde se puede hacer una búsqueda y ver la información de las mismas.
+Por otro lado cuenta con un listado de películas que han sido votadas y comentadas desde la propia webapp.
 
-## Available Scripts
+## Uso y manejo
 
-In the project directory, you can run:
+Una vez clonado el repositorio: -`npm install` para instalar dependencias. -`npm start` para iniciar el frontend -`npm run dev` en el directorio de backend para iniciar el servidor donde se almacenan las peliculas votadas
 
-### `npm start`
+### Diseño y Desarrollo
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+En cuanto al diseño debo decir que ahora mismo la web está pensada sólo para desktop y laptop por un pequeño efecto visual en la home
+y que debo replantear para móvil y tablet.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+He limitado la visualizacion de las peliculas en /films a 10, pensando en el efecto de ver un carrete con sus fotogramas. La idea es que con el componente 'carousel' de react se pueda paginar y deslizar las diferentes peliculas por ese carrete.
 
-### `npm test`
+Aquellas películas que vienen sin imagen de la Api les he puesto una imagen por defecto de una bobina de proyector.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+En /films tenemos el listado por defecto de las novedades 2021, en la barra de búsqueda se pueden consultar otras películas por título.
 
-### `npm run build`
+Una vez pinchamos en una de las imagenes nos movemos a /films/:idMovie y podemos ver los detalles de la película: imagen, titulo, género y computo de votaciones. También aparece un pequeño formulario en el que se puede votar y comentar sobre ella. Esos datos se almacenan en una bbdd propia.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Para ver esas películas votadas tenemos el botón de 'Películas votadas' que nos lleva a /filmsVoted donde se verá una lista de tarjetas con : título, votación y comentario.(la imagen está pendiente de que aparezca)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Dándole al icono del proyector arriba a la izquierda en cualquiera de las páginas volvemos a la home /.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Mejoras (muchas jeje)
 
-### `npm run eject`
+1. Corto Plazo:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+   - Implementar mejor typeScript. Es la primera vez que trabajo con él y soy consciente de los fallos(por ejemplo tanto any). De hecho tuve problemas con las props por ese motivo.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   - Manejar errores.
+   - Paginación.
+   - Subir imágenes a películas votadas (guardarlas en bbdd o llamar a Api).
+   - Responsive para móvil.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+2. Medio Plazo:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+   - Utilizar Redux.
+   - Hacer post a la Api sin necesidad de crear una bbdd propia.
+   - Test unitarios con React Testing Library.
 
-## Learn More
+3. Largo plazo:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+   - Añadir filtros : por año, actor, mejor votadas..
+   - Registro y Login de usuarios.
+   - Poder ver el trailer.

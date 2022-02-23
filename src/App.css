@@ -1,31 +1,354 @@
-.App {
-  text-align: center;
+/* ################
+   ##### HOME #####
+   ################ 
+*/
+
+.home {
+  width: auto;
+  background-color: rgb(18, 4, 29);
+  height: 578px;
+  display: grid;
+  grid-template-columns: 500px 500px;
+  grid-template-rows: 500px 500px;
+  grid-template-areas:
+    'div1 cono'
+    'titulo cono';
+  justify-content: space-around;
+  align-items: baseline;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.conjunto {
+  grid-area: div1;
+}
+.titulo {
+  font-size: 100px;
+  color: rgb(236, 168, 104);
+  font-family: fantasy;
+  grid-area: titulo;
+  margin-top: 310px;
+  margin-left: 45px;
+}
+.rueda1 {
+  position: absolute;
+  width: 110px;
+  height: 110px;
+  margin-left: 470px;
+  margin-top: 220px;
+}
+.rueda2 {
+  position: absolute;
+  width: 110px;
+  height: 110px;
+  margin-left: 380px;
+  margin-top: 210px;
+}
+.proyector {
+  position: absolute;
+
+  width: 240px;
+  height: 130px;
+  margin-top: 260px;
+  margin-left: 380px;
+}
+
+.cono {
+  width: 0;
+  height: 0;
+
+  border-right: 250px solid transparent;
+  border-left: 250px solid transparent;
+  border-top: 650px solid rgb(175, 161, 123);
+  transform: rotate(90deg);
+  position: absolute;
+
+  margin-left: 790px;
+}
+.navHome {
+  position: absolute;
+  width: 300px;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin-left: 1050px;
+  margin-top: 140px;
+}
+/* #################### 
+   ##### ListFilms ####
+   #################### 
+*/
+.divFilms {
+  width: auto;
+  height: auto;
+  background-color: rgb(18, 4, 29);
+}
+.navHeader {
+  background-color: rgb(18, 4, 29);
+  display: flex;
+  align-items: center;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 10px;
+}
+
+.logo {
+  width: 100px;
+}
+.listDecoration1 {
+  background-color: rgb(18, 4, 29);
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 10px;
+}
+.listDecoration2 {
+  background-color: rgb(18, 4, 29);
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 10px;
+  padding-top: 40px;
+  margin: 0;
+}
+h1 {
+  margin: 0;
+  padding: 30px;
+  padding-top: 40px;
+  background-color: rgb(18, 4, 29);
+  color: rgb(233, 200, 169);
+}
+.noved_search {
+  display: flex;
+}
+
+.link {
+  text-decoration: none;
+  display: flex;
+  justify-items: start;
+  border: solid 2.5px rgb(18, 4, 29);
+  border-radius: 10px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 30px;
+  padding-right: 30px;
+  background-color: rgb(161, 122, 85);
+  color: rgb(18, 4, 29);
+  font-size: large;
+  font-family: fantasy;
+}
+.linkNav {
+  text-decoration: none;
+  margin-left: 200px;
+  margin-top: 25px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 30px;
+  padding-right: 30px;
+  border-radius: 10px;
+  background-color: rgb(161, 122, 85);
+  color: rgb(18, 4, 29);
+  font-size: large;
+  font-family: fantasy;
+}
+.inputSearch {
+  text-decoration: none;
+  margin-top: 30px;
+  margin-left: 500px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  border-radius: 10px;
+  background-color: rgb(233, 200, 169);
+  color: rgb(18, 4, 29);
+  font-size: x-large;
+  font-family: fantasy;
+}
+.linkNav:hover,
+.link:hover,
+.cartel:hover,
+.logo:hover,
+.inputSearch:hover {
+  opacity: 0.7;
+}
+::placeholder {
+  color: rgb(18, 4, 29);
+  font-size: large;
+  font-family: fantasy;
+}
+/* #################
+   ##### Films #####
+   ################# 
+*/
+
+.films {
+  width: auto;
+  background-color: rgb(18, 4, 29);
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: small;
+  color: rgb(172, 149, 86);
+}
+.cartel {
+  width: 140px;
+  height: 190px;
+}
+
+.pelicula {
+  position: relative;
+  min-width: 120px;
+  max-height: 230px;
+}
+.pelicula h2 {
+  max-width: 140px;
+  height: 20px;
+  text-align: center;
+  font-size: small;
+}
+.pelicula h3 {
+  border-color: black;
+  width: 140px;
+  text-align: center;
+  background-color: rgb(136, 2, 29);
+  padding-bottom: 2px;
+  padding-top: 2px;
+  font-size: x-small;
+}
+
+/* ####################
+   ##### Filefilm #####
+   ####################
+*/
+
+.fileFilm {
+  width: auto;
+  height: 100vh;
+  background-color: rgb(18, 4, 29);
+}
+.fileFilm article {
+  padding-top: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 30px;
+}
+.fileFilm h2 {
+  color: rgb(161, 122, 85);
+  font-size: 45px;
+  font-family: fantasy;
+}
+.fileFilm h3,
+h4 {
+  color: rgb(161, 122, 85);
+  font-size: 20px;
+  font-family: fantasy;
+}
+.fileFilm p {
+  width: 700px;
+  color: rgb(161, 122, 85);
+  font-family: fantasy;
+  font-size: large;
+}
+.recuentoVotos {
+  width: 350px;
+  padding-left: 20px;
+  display: flex;
+  justify-content: space-around;
+  background-color: rgb(92, 35, 46);
+}
+.fileFilm img {
+  padding-top: 40px;
+  padding-left: 80px;
+  width: 450px;
+  height: 630px;
+}
+
+.formVote {
+  margin-top: 50px;
+  width: 500px;
+  height: 250px;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  background-color: rgb(139, 69, 57);
+  padding: 20px;
+}
+
+.tituloFormVoto {
+  border: none;
+  background-color: rgb(139, 69, 57);
+  width: 485px;
+  padding: 7px;
+  font-size: large;
+  font-family: fantasy;
+}
+.formVote input,
+textarea {
+  font-size: x-large;
+  font-family: fantasy;
+  background-color: rgb(118, 102, 131);
+}
+
+/* #####################
+   ##### FilmVoted #####
+   #####################
+*/
+
+.divFilmsVoted {
+  width: auto;
+  height: 100vh;
+  background-color: rgb(18, 4, 29);
+}
+.SecFilmVoted {
+  width: auto;
+  height: auto;
+  background-color: rgb(18, 4, 29);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.filmVoted {
+  margin: 40px;
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+  width: 500px;
+  height: 200px;
+  border: rgb(139, 69, 57) solid 2px;
+  color: rgb(161, 122, 85);
+}
+
+.myVotacion {
+  width: 25px;
+  height: 20px;
+  color: rgb(18, 4, 29, 0.7);
+  font-size: large;
+  text-align: center;
+  padding: 10px;
+  background-color: crimson;
+  border-radius: 50px;
+}
+.pFilmVoted {
+  width: 200px;
+  height: 100px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  .rueda1 {
+    animation: App-logo-spin infinite 2s linear;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
+  .rueda2 {
+    animation: App-logo-spin infinite 2s linear;
+  }
+  .cono {
+    animation: aparecer 1.5s;
+  }
 }
 
 @keyframes App-logo-spin {
@@ -35,4 +358,33 @@
   to {
     transform: rotate(360deg);
   }
+}
+@keyframes aparecer {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.1;
+  }
+  20% {
+    opacity: 0.2;
+  }
+  30% {
+    opacity: 0.3;
+  }
+}
+
+@media (max-width: 560px) {
+  .films {
+    display: grid;
+    grid-template-rows: repeat(auto-fill, 350px);
+    height: auto;
+  }
+  /* .ul {
+    display: grid;
+    grid-template-rows: repeat(auto-fill, 100px);
+    align-items: center;
+    justify-content: space-around;
+    height: 200px;
+  } */
 }
