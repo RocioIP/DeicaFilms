@@ -44,9 +44,20 @@ export default function ListFilms() {
   return (
     <div className='divFilms'>
       <Navegacion />
-
-      <h1>Novedades 2021</h1>
-
+      <div className='noved_search'>
+        <h1>Novedades 2021</h1>
+        <section className='divFilms'>
+          <form onSubmit={handleSubmit}>
+            <input
+              onChange={handleChange}
+              type='text'
+              placeholder='Busca una película'
+              className='inputSearch'
+              value={keyword}
+            />
+          </form>
+        </section>
+      </div>
       <ListDecoration1 />
       <section className='films'>
         {keyword
@@ -82,17 +93,6 @@ export default function ListFilms() {
             ))}
       </section>
       <ListDecoration2 />
-      <section className='divFilms'>
-        <form onSubmit={handleSubmit}>
-          <input
-            onChange={handleChange}
-            type='text'
-            placeholder='Busca una película'
-            className='inputSearch'
-            value={keyword}
-          />
-        </form>
-      </section>
     </div>
   );
 }

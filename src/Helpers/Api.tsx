@@ -9,7 +9,7 @@ export default function getFilmsNew(path: string) {
     .then((response) => {
       const { results = [] } = response;
       console.log(results);
-      const pelis = results.slice(0, 10);
+      const pelis = results.slice(0, 6);
       console.log(pelis);
 
       if (Array.isArray(pelis)) {
